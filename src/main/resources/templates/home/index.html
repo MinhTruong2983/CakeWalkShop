@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Cake . Walk</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+<!-- Favicon -->
+<link th:href="@{/img/favicon.ico}" rel="icon">
+
+<!-- Google Web Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link th:href="@{https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Playfair+Display:wght@600;700&display=swap}" rel="stylesheet"> 
+
+<!-- Icon Font Stylesheet -->
+<link th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css}" rel="stylesheet">
+<link th:href="@{https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css}" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<!-- Libraries Stylesheet -->
+<link th:href="@{/lib/animate/animate.min.css}" rel="stylesheet">
+<link th:href="@{/lib/owlcarousel/assets/owl.carousel.min.css}" rel="stylesheet">
+
+<!-- Customized Bootstrap Stylesheet -->
+
+    <link th:href="@{https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css}" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<!-- Template Stylesheet -->
+<link th:href="@{/css/style.css}" rel="stylesheet">
+
+</head>
+
+<body>
+ 
+
+
+
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+        <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
+            <h1 class="text-white m-0">CakeWalk</h1>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav mx-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="service.html" class="nav-item nav-link">Services</a>
+                <a href="product.html" class="nav-item nav-link">Products</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                    <div class="dropdown-menu m-0">
+                        <a href="team.html" class="dropdown-item">Our Team</a>
+                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a href="404.html" class="dropdown-item">404 Page</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            <div class=" d-none d-lg-flex">
+                <div class="flex-shrink-0 btn-lg-square border border-light rounded-circle">
+                    <i class="fas fa-sign-in-alt text-warning"></i>
+                </div>
+                <div class="ps-3">
+                  
+                    <p class="text-light fs-5 mb-0">Login</p>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+<section> 
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="owl-carousel header-carousel position-relative">
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" th:src="@{/img/nen.jpg}" alt=""style="height: 100vh;">
+                <div class="owl-carousel-inner">
+                    <div class="container">
+                        <div class="col-md-8 col-sm-12 ">
+                             <h3>Ngọt ngào như Crush của bạn</h3>
+                             <h1>Chào mừng đến với Carewalk - Nơi Trái Tim Bánh Ngọt Bắt Đầu!</h1>
+                             <a href="#team" class="btn btn-warning rounded-pill py-3 px-5">Chỉ có tại CareWalk </a>
+                        </div>
+                   </div>
+                </div>
+            </div>
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" th:src="@{/img/nen2.jpg}" alt=""style="height: 100vh;">
+                <div class="owl-carousel-inner">
+                    <div class="container">
+                        <div class="col-md-8 col-sm-12 ">
+                             <h3>Tại đây, chúng tôi tự hào giới thiệu menu bánh ngọt đa dạng và phong phú, chắc chắn sẽ làm mãn nhãn cả những tín đồ ẩm thực khó tính nhất.</h3>
+                             <h1>Khám Phá Menu Bánh Ngọt Tại Carewalk</h1>
+                             <a href="#menu" class="btn btn-warning rounded-pill py-3 px-5">Discover menu</a>
+                        </div>
+                   </div>
+                </div>
+            </div>
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" th:src="@{/img/nen3.jpg}" alt="" style="height: 100vh;">
+                <div class="owl-carousel-inner">
+               
+                        <div class="container">
+                            <div class="col-md-8 col-sm-12 ">
+                                 <h3>Tại đây, chúng tôi tự hào giới thiệu menu bánh ngọt đa dạng và phong phú, chắc chắn sẽ làm mãn nhãn cả những tín đồ ẩm thực khó tính nhất.</h3>
+                                 <h1>Khám Phá Menu Bánh Ngọt Tại Carewalk</h1>
+                                 <a href="#menu" class="btn btn-warning rounded-pill py-3 px-5">Discover menu</a>
+                            </div>
+                   
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!-- Carousel End -->
+
+   <article>
+    
+   </article>
+
+     <!-- ABOUT -->
+     <section id="about" data-stellar-background-ratio="0.5">
+        <div class="container">
+             <div class="row">
+
+                  <div class="col-md-6 col-sm-12 text-dark">
+                       <div class="about-info">
+                            <div class="section-title wow fadeInUp" data-wow-delay="0.2s">
+                                 <h4>CareWalk</h4>
+                                 <h2>Chào mừng bạn đến với Carewalk - Nơi Hạnh Phúc Ngọt Ngào Bắt Đầu!</h2>
+                            </div>
+
+                            <div class="wow fadeInUp" data-wow-delay="0.4s">
+                                 <p>Tại Carewalk, chúng tôi không chỉ bán bánh ngọt, chúng tôi tạo ra những kỷ niệm đáng nhớ. Với mỗi chiếc bánh, chúng tôi chắt lọc niềm đam mê và tình yêu, để bạn có thể thưởng thức hương vị ngọt ngào của sự hạnh phúc. .</p>
+                                 <p>Hãy đặt hàng ngay hôm nay và để Carewalk là điểm dừng chân của những giây phút ngọt ngào trong cuộc sống của bạn. Chúng tôi tin rằng, mỗi chiếc bánh đều là một câu chuyện yêu thương, và chúng tôi muốn chia sẻ câu chuyện đó với bạn. Trân trọng. Đội ngũ Carewalk.</p>
+                            </div>
+                       </div>
+                  </div>
+
+                  <div class="col-md-6 col-sm-12 pb-5">
+                       <div class="wow fadeInUp about-image" data-wow-delay="0.6s">
+                           <img th:src="@{/img/a2.jpg}" class="img-responsive rounded " alt="">
+                       </div>
+                  </div>
+                  
+             </div>
+        </div>
+   </section>
+
+<!-- Video -->
+<section class="hero-section " id="section_3">
+    <div class="container d-flex justify-content-center align-items-center">
+      
+      <div class="row" >
+          
+            <div class="col-md-12 col-sm-12">
+                 <div class="section-title wow fadeInUp text-white" data-wow-delay="0.1s">
+                      <h1>Cake Walk</h1>
+                      <h4>Ngọt như Crush của bạn !</h4>
+                 </div>
+            </div>
+          
+      </div>
+
+    </div>
+    <div class="video-wrap">
+        <video autoplay="" loop="" muted="" class="custom-video" poster="">
+            <source th:src="@{/video/banh.mp4}" type="video/mp4">
+        </video>
+    </div>
+</section>
+
+
+    
+
+    <!-- Facts Start -->
+    <div class="container-xxl py-6 ">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="fact-item bg-light rounded text-center h-100 p-5">
+                        <i class="fa fa-certificate fa-4x text-warning mb-4"></i>
+                        <p class="mb-2">Years Experience</p>
+                        <h1 class="display-5 mb-0" data-toggle="counter-up">50</h1>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="fact-item bg-light rounded text-center h-100 p-5">
+                        <i class="fa fa-users fa-4x text-warning mb-4"></i>
+                        <p class="mb-2">Skilled Professionals</p>
+                        <h1 class="display-5 mb-0" data-toggle="counter-up">175</h1>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="fact-item bg-light rounded text-center h-100 p-5">
+                        <i class="fa fa-bread-slice fa-4x text-warning mb-4"></i>
+                        <p class="mb-2">Total Products</p>
+                        <h1 class="display-5 mb-0" data-toggle="counter-up">135</h1>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeIn" data-wow-delay="0.7s">
+                    <div class="fact-item bg-light rounded text-center h-100 p-5">
+                        <i class="fa fa-cart-plus fa-4x text-warning mb-4"></i>
+                        <p class="mb-2">Order Everyday</p>
+                        <h1 class="display-5 mb-0" data-toggle="counter-up">9357</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Facts End -->
+    <!-- TEAM -->
+    <section id="team" data-stellar-background-ratio="0.5">
+        <div class="container">
+             <div class="row">
+
+                  <div class="col-md-12 col-sm-12">
+                       <div class="section-title wow fadeInUp text-center pt-4 pb-3" data-wow-delay="0.1s">
+                            <h2 class="fs-bold">Không Đơn Giản Chỉ Là Bánh Ngọt</h2>
+                            <p>chúng tôi cung cấp kiến thức về bánh</p>
+                       </div>
+                  </div>
+
+                  <div class="col-md-4 col-sm-4">
+                       <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                        <img th:src="@{/img/nguyenlieu.jpg}" class="img-responsive" alt="">
+                                 <div class="team-hover">
+                                      <div class="team-item">
+                                           <h4>Duis vel lacus id magna mattis vehicula</h4> 
+                                           <ul class="social-icon">
+                                                <li><a href="#" class="fa fa-linkedin-square"></a></li>
+                                                <li><a href="#" class="fa fa-envelope-o"></a></li>
+                                           </ul>
+                                      </div>
+                                 </div>
+                       </div>
+                       <div class="team-info">
+                            <h3>Cách làm bánh</h3>
+                            <p>Tìm hiểu về cách làm bánh</p>
+                       </div>
+                  </div>
+
+                  <div class="col-md-4 col-sm-4">
+                       <div class="team-thumb wow fadeInUp" data-wow-delay="0.4s">
+                        <img th:src="@{/img/a.jpg}" class="img-responsive" alt="">
+                                 <div class="team-hover">
+                                      <div class="team-item">
+                                           <h4>Cras suscipit neque quis odio feugiat</h4>
+                                           <ul class="social-icon">
+                                                <li><a href="#" class="fa fa-instagram"></a></li>
+                                                <li><a href="#" class="fa fa-flickr"></a></li>
+                                           </ul>
+                                      </div>
+                                 </div>
+                       </div>
+                       <div class="team-info">
+                            <h3>Sản phẩm</h3>
+                            <p>Đa dạng loại bánh</p>
+                       </div>
+                  </div>
+
+                  <div class="col-md-4 col-sm-4">
+                       <div class="team-thumb wow fadeInUp" data-wow-delay="0.6s">
+                            <img th:src="@{/img/datbanh.jpg}" class="img-responsive" alt="">
+                                 <div class="team-hover">
+                                      <div class="team-item">
+                                           <h4>Etiam auctor enim tristique faucibus</h4>
+                                           <ul class="social-icon">
+                                                <li><a href="#" class="fa fa-github"></a></li>
+                                                <li><a href="#" class="fa fa-google"></a></li>
+                                           </ul>
+                                      </div>
+                                 </div>
+                       </div>
+                       <div class="team-info">
+                            <h3>Dịch vụ</h3>
+                            <p>Đặt bánh sự kiện</p>
+                       </div>
+                  </div>
+                  
+             </div>
+        </div>
+   </section>
+
+
+
+    <!-- About Start -->
+    <div class="container-xxl py-6">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="row img-twice position-relative h-100">
+                        <div class="col-6">
+                            <img class="img-fluid rounded" th:src="@{/img/lambanh.jpg}" alt="">
+                        </div>
+                        <div class="col-6 align-self-end">
+                            <img class="img-fluid rounded" th:src="@{/img/lambanh2.jpg}" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="h-100">
+                        <p class="text-primary text-uppercase mb-2">Quy trình làm bánh tại CakwWalk.</p>
+                        <h1 class="display-6 mb-4">Bạn đã bao giờ làm bánh ngọt chưa ?</h1>
+                        <p>Chúng tôi chỉ sử dụng những nguyên liệu tươi ngon và chất lượng nhất cho mỗi chiếc bánh tại Cake Walk.</p>
+                        <p>Hãy để Cake Walk chăm sóc vị giác của bạn với những chiếc bánh ngọt thơm ngon và đẹp mắt. Hãy đến và trải nghiệm hương vị tuyệt vời của nghệ thuật làm bánh tại địa chỉ của chúng tôi.</p>
+                        <div class="row g-2 mb-4">
+                            <div class="col-sm-6">
+                                <i class="fa fa-check text-primary me-2"></i>Bước 1: Chuẩn bị Nguyên Liệu
+                            </div>
+                            <div class="col-sm-6">
+                                <i class="fa fa-check text-primary me-2"></i>Bước 2: Pha Trộn Nguyên Liệu
+                            </div>
+                            <div class="col-sm-6">
+                                <i class="fa fa-check text-primary me-2"></i>Bước 3: Nướng Bánh
+                            </div>
+                            <div class="col-sm-6">
+                                <i class="fa fa-check text-primary me-2"></i>Bước 4: Trang Trí 
+                            </div>
+                        </div>
+                        <a class="btn btn-warning rounded-pill py-3 px-5" href="">Sản phẩm</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+
+
+    <!-- Service Start -->
+    <div class="container-xxl py-6">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <p class="text-primary text-uppercase mb-2"></p>
+                    <h1 class="display-6 mb-4"></h1>
+                    <p class="mb-5 fw-bold fs-2"> Dịch vụ của CakeWalk</p>
+                    <div class="row gy-5 gx-4">
+                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="flex-shrink-0 btn-square bg-warning rounded-circle me-3">
+                                    <i class="fa fa-bread-slice text-white"></i>
+                                </div>
+                                <h5 class="mb-0">Chất lượng sản phẩm</h5>
+                            </div>
+                            <span>Chúng tôi mang đến chất lượng sản phẩm tốt nhất</span>
+                        </div>
+                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.2s">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="flex-shrink-0 btn-square bg-warning rounded-circle me-3">
+                                    <i class="fa fa-birthday-cake text-white"></i>
+                                </div>
+                                <h5 class="mb-0">Đặt bánh theo yêu cầu</h5>
+                            </div>
+                            <span>Làm ra những chiếc bánh theo yêu cầu của khách hàng </span>
+                        </div>
+                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="flex-shrink-0 btn-square bg-warning rounded-circle me-3">
+                                    <i class="fa fa-cart-plus text-white"></i>
+                                </div>
+                                <h5 class="mb-0">Đặt hàng dễ dàng</h5>
+                            </div>
+                            <span>Đặt hàng là việc cực kì đơn giản ở CakeWalk </span>
+                        </div>
+                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.4s">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="flex-shrink-0 btn-square bg-warning rounded-circle me-3">
+                                    <i class="fa fa-truck text-white"></i>
+                                </div>
+                                <h5 class="mb-0">Giao hàng cẩn thận</h5>
+                            </div>
+                            <span>Sản phẩm sẽ đến tay của khách hàng 1 cách nhanh chóng và cẩn thận </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="row img-twice position-relative h-100">
+                        <div class="col-6">
+                            <img class="img-fluid rounded" th:src="@{/img/service-1.jpg}" alt="" style="height: 350px;">
+                        </div>
+                        <div class="col-6 align-self-end">
+                            <img class="img-fluid rounded" th:src="@{/img/datbanh.jpg}" alt=""style="height: 350px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+   <!-- MENU-->
+   <section id="menu" data-stellar-background-ratio="0.5" style="background-color: antiquewhite;">
+ 
+ <div class="container-xxl py-6 " >
+    <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+            <p class="text-primary text-uppercase mb-2">Menu</p>
+            <h1 class="display-6 mb-4">Đa dạng loại bánh</h1>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="team-item text-center rounded overflow-hidden">
+                    <img class="img-fluid" th:src="@{/img/nen.jpg}" alt="" style="height: 300px;">
+                    <div class="team-text">
+                        <div class="team-title">
+                            <h5>Bánh cake dâu tây </h5>
+                            <span>5$</span>
+                        </div>
+                        <div class="team-social">
+                            <a class="btn btn-square btn-light rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square btn-light rounded-circle" href=""><i class="fab fa-twitter"></i></a>
+                      
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="team-item text-center rounded overflow-hidden">
+                    <img class="img-fluid" th:src="@{/img/nen.jpg}" alt="" style="height: 300px;">
+                    <div class="team-text">
+                        <div class="team-title">
+                            <h5>Bánh cake dâu tây </h5>
+                            <span>5$</span>
+                        </div>
+                        <div class="team-social">
+                            <a class="btn btn-square btn-light rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square btn-light rounded-circle" href=""><i class="fab fa-twitter"></i></a>
+                      
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="team-item text-center rounded overflow-hidden">
+                    <img class="img-fluid" th:src="@{/img/nen.jpg}" alt="" style="height: 300px;">
+                    <div class="team-text">
+                        <div class="team-title">
+                            <h5>Bánh cake dâu tây </h5>
+                            <span>5$</span>
+                        </div>
+                        <div class="team-social">
+                            <a class="btn btn-square btn-light rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square btn-light rounded-circle" href=""><i class="fab fa-twitter"></i></a>
+                      
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="team-item text-center rounded overflow-hidden">
+                    <img class="img-fluid" th:src="@{/img/nen.jpg}" alt="" style="height: 300px;">
+                    <div class="team-text">
+                        <div class="team-title">
+                            <h5>Bánh cake dâu tây </h5>
+                            <span>5$</span>
+                        </div>
+                        <div class="team-social">
+                            <a class="btn btn-square btn-light rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square btn-light rounded-circle" href=""><i class="fab fa-twitter"></i></a>
+                      
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Team End -->
+
+
+</section>
+    <!-- Testimonial Start -->
+    <div class="container-xxl bg-light my-6 py-6 pb-0">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <p class="text-primary text-uppercase mb-2">Đánh giá </p>
+                <h1 class="display-6 mb-4">Đánh giá từ khách hàng</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                <div class="testimonial-item bg-white rounded p-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-circle border p-1" th:src="@{/img/testimonial-1.jpg}" alt="">
+                        <div class="ms-4">
+                            <h5 class="mb-1">Client Name</h5>
+                            <span>Profession</span>
+                        </div>
+                    </div>
+                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                </div>
+                <div class="testimonial-item bg-white rounded p-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-circle border p-1" th:src="@{/img/testimonial-2.jpg}" alt="">
+                        <div class="ms-4">
+                            <h5 class="mb-1">Client Name</h5>
+                            <span>Profession</span>
+                        </div>
+                    </div>
+                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                </div>
+                <div class="testimonial-item bg-white rounded p-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-circle border p-1" th:src="@{/img/testimonial-3.jpg}" alt="">
+                        <div class="ms-4">
+                            <h5 class="mb-1">Client Name</h5>
+                            <span>Profession</span>
+                        </div>
+                    </div>
+                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                </div>
+                <div class="testimonial-item bg-white rounded p-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-circle border p-1" th:src="@{/img/testimonial-4.jpg}" alt="">
+                        <div class="ms-4">
+                            <h5 class="mb-1">Client Name</h5>
+                            <span>Profession</span>
+                        </div>
+                    </div>
+                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                </div>
+            </div>
+     </div>
+    </div>
+    
+    
+    
+   <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Thông tin đơn hàng</h2>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Ảnh</th>
+                                    <th>Tên sản phẩm</th>
+                                    <th>Số lượng</th>
+                                    <th>Thành tiền</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Dữ liệu đơn hàng được hiển thị ở đây -->
+                            </tbody>
+                        </table>
+                        <h4>Tổng thanh toán: <span th:text="${totalAmount} + ' USD'"></span></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Thông tin người mua</h2>
+                        <form th:action="@{/order}" method="post">
+                            <div class="form-group">
+                                <label for="fullName">Họ và tên:</label>
+                                <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Nhập họ và tên" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <label for="phoneNumber">Số điện thoại:</label>
+                                <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Nhập số điện thoại" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Email" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Địa chỉ giao hàng:</label>
+                                <input type="text" class="form-control" id="address" name="address" placeholder="Nhập địa chỉ" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <label for="note">Ghi chú (nếu có):</label>
+                                <textarea class="form-control" id="note" name="note" rows="3" placeholder="Ghi chú thêm (nếu có..)"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="discountCode">Mã giảm giá:</label>
+                                <input type="text" class="form-control" id="discountCode" name="discountCode" placeholder="Nhập mã giảm giá (nếu có..)" />
+                                <small><a href="/cart/gmail">Nhận mã giảm giá</a></small>
+                            </div>
+                            <div class="form-group">
+                                <label>Phương thức thanh toán:</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="paymentCash" name="paymentMethod" value="COD" />
+                                    <label class="form-check-label" for="paymentCash">Thanh toán tiền mặt khi nhận hàng (COD)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="paymentBank" name="paymentMethod" value="ChuyenKhoan" />
+                                    <label class="form-check-label" for="paymentBank">Chuyển khoản</label>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-warning mt-2 mb-2 text-white fw-bold">Mua hàng</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer my-6 mb-0 py-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Office Address</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-0" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Quick Links</h4>
+                    <a class="btn btn-link" href="">About Us</a>
+                    <a class="btn btn-link" href="">Contact Us</a>
+                    <a class="btn btn-link" href="">Our Services</a>
+                    <a class="btn btn-link" href="">Terms & Condition</a>
+                    <a class="btn btn-link" href="">Support</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Quick Links</h4>
+                    <a class="btn btn-link" href="">About Us</a>
+                    <a class="btn btn-link" href="">Contact Us</a>
+                    <a class="btn btn-link" href="">Our Services</a>
+                    <a class="btn btn-link" href="">Terms & Condition</a>
+                    <a class="btn btn-link" href="">Support</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Photo Gallery</h4>
+                    <div class="row g-2">
+                        <div class="col-4">
+                            <img class="img-fluid bg-light rounded p-1" th:src="@{/img/product-1.jpg}" alt="Image">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light rounded p-1" th:src="@{/img/product-2.jpg}" alt="Image">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light rounded p-1" th:src="@{/img/product-3.jpg}" alt="Image">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light rounded p-1" th:src="@{/img/product-2.jpg}" alt="Image">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light rounded p-1" th:src="@{/img/product-3.jpg}" alt="Image">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light rounded p-1" th:src="@{/img/product-1.jpg}" alt="Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright text-light py-4 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a href="#">Your Site Name</a>, All Right Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                    Designed By <a href="https://htmlcodex.com">HTML Codex</a>
+                    <br>Distributed By: <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn fas fa-arrow-up btn-lg btn-warning btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+<!-- JavaScript Libraries -->
+<script th:src="@{https://code.jquery.com/jquery-3.4.1.min.js}"></script>
+<script th:src="@{https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js}"></script>
+<script th:src="@{/lib/wow/wow.min.js}"></script>
+<script th:src="@{/lib/easing/easing.min.js}"></script>
+<script th:src="@{/lib/waypoints/waypoints.min.js}"></script>
+<script th:src="@{/lib/counterup/counterup.min.js}"></script>
+<script th:src="@{/lib/owlcarousel/owl.carousel.min.js}"></script>
+
+<!-- Template Javascript -->
+<script th:src="@{/js/main.js}"></script>
+
+</body>
+
+</html>
