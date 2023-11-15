@@ -19,11 +19,11 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-@Table(name = "OrderDetails")
+@Table(name = "orderdetails")
 public class OrderDetail {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "Orderdetailid")
+    @Column(name = "orderdetailid")
     private int id;
 	
     @ManyToOne
@@ -31,12 +31,12 @@ public class OrderDetail {
     private Orders order;
 
     @ManyToOne
-    @JoinColumn(name = "watchid")
-    private Cakes watch;
+    @JoinColumn(name = "cakeid")
+    private Cakes cake;
 
-    @Column(name = "Quantity")
+    @Column(name = "quantity")
     private int quantity;
 
-    @Column(name = "Price")
+    @Column(name = "price")
     private BigDecimal price;
 }

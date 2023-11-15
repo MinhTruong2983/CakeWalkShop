@@ -13,12 +13,16 @@ public class home {
 		return "/home/index";
 	}
 	
+	
+	// trang sản phẩm 
 	@GetMapping("/home/product")
 	private String products() {
 		// TODO Auto-generated method stub
 
 		return "/products/product";
 	}
+	
+	// trang thông tin
 	@GetMapping("/home/about")
 	private String about() {
 		// TODO Auto-generated method stub
@@ -26,7 +30,7 @@ public class home {
 		return "/about/about";
 	}
 	
-	
+	// trang báo lỗi 
 	@GetMapping("/home/404")
 	private String loi() {
 		// TODO Auto-generated method stub
@@ -34,6 +38,7 @@ public class home {
 		return "/404/404";
 	}
 	
+	// trang liên hệ
 	@GetMapping("/home/contact")
 	private String contact() {
 		// TODO Auto-generated method stub

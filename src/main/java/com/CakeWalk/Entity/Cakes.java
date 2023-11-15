@@ -15,29 +15,31 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+
+
 @Data
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity @Table(name = "Watches")
+@Entity @Table(name = "cakes")
 public class Cakes {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "WatchID")
-    private int watchid;
+    @Column(name = "cakeid")
+    private int cakeid;
 
-    @Column(name = "Name")
+    @Column(name = "name")
     private String name;
 
 
-    @Column(name = "Description")
+    @Column(name = "description")
     private String description;
 
-    @Column(name = "Price")
+    @Column(name = "price")
     private BigDecimal price;
 
-    @Column(name = "Quantity")
+    @Column(name = "quantity")
     private int quantity;
 
     @Column(name = "Img")

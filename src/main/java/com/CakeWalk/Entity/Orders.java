@@ -23,23 +23,22 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-@Table(name = "Orders")
+@Table(name = "orders")
 public class Orders {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "OrderID")
-    private int id;
+    @Column(name = "orderid")
+    private int orderid;
 
 
     @Column(name = "fullname")
-    private String fullname;
+    private String fullName;
     
     @Column(name = "phonenumber")
     private String phoneNumber;
     
-    @Column(name = "email")
-    private String email;
+    
     @Column(name = "note")
     private String note;
 
@@ -52,5 +51,4 @@ public class Orders {
     @Column(name = "address") //địa chỉ
     private String address;
 
-    // Getters and setters
 }
