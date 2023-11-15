@@ -407,22 +407,33 @@
  <div class="container-xxl py-6 " >
     <div class="container">
         <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-            <p class="text-primary text-uppercase mb-2">Menu</p>
             <h1 class="display-6 mb-4">Đa dạng loại bánh</h1>
         </div>
         <div class="row g-4">
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+				    <div class="team-item text-center rounded overflow-hidden">
+                    <img class="img-fluid" th:src="@{/img/nen.jpg}" alt="" style="height: 300px;">
+                    <div class="team-text">
+                        <div class="team-title">
+                            <h5>Bánh cake trái cây</h5>
+                            <span class="text-danger">5$ - 15$</span>
+                        </div>
+                       <div class="team-social">
+                            <a class="btn btn-square btn-light rounded-circle" th:href="@{/home/product}"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>	
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="team-item text-center rounded overflow-hidden">
                     <img class="img-fluid" th:src="@{/img/nen.jpg}" alt="" style="height: 300px;">
                     <div class="team-text">
                         <div class="team-title">
-                            <h5>Bánh cake dâu tây </h5>
-                            <span>5$</span>
+                            <h5>Bánh cake socola </h5>
+                            <span class="text-danger" >5$ - 20$</span>
                         </div>
                         <div class="team-social">
-                            <a class="btn btn-square btn-light rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square btn-light rounded-circle" href=""><i class="fab fa-twitter"></i></a>
-                      
+                            <a class="btn btn-square btn-light rounded-circle" th:href="@{/home/product}"><i class="fab fa-facebook-f"></i></a>
                         </div>
                     </div>
                 </div>
@@ -432,13 +443,11 @@
                     <img class="img-fluid" th:src="@{/img/nen.jpg}" alt="" style="height: 300px;">
                     <div class="team-text">
                         <div class="team-title">
-                            <h5>Bánh cake dâu tây </h5>
-                            <span>5$</span>
+                            <h5>Bánh nướng </h5>
+                            <span class="text-danger">5$- 20$</span>
                         </div>
-                        <div class="team-social">
-                            <a class="btn btn-square btn-light rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square btn-light rounded-circle" href=""><i class="fab fa-twitter"></i></a>
-                      
+                     <div class="team-social">
+                            <a class="btn btn-square btn-light rounded-circle" th:href="@{/home/product}"><i class="fab fa-facebook-f"></i></a>
                         </div>
                     </div>
                 </div>
@@ -447,30 +456,12 @@
                 <div class="team-item text-center rounded overflow-hidden">
                     <img class="img-fluid" th:src="@{/img/nen.jpg}" alt="" style="height: 300px;">
                     <div class="team-text">
-                        <div class="team-title">
-                            <h5>Bánh cake dâu tây </h5>
-                            <span>5$</span>
+                        <div class="team-title ">
+                            <h5>Bánh kem </h5>
+                            <span class="text-danger">10$ - 30$</span>
                         </div>
-                        <div class="team-social">
-                            <a class="btn btn-square btn-light rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square btn-light rounded-circle" href=""><i class="fab fa-twitter"></i></a>
-                      
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="team-item text-center rounded overflow-hidden">
-                    <img class="img-fluid" th:src="@{/img/nen.jpg}" alt="" style="height: 300px;">
-                    <div class="team-text">
-                        <div class="team-title">
-                            <h5>Bánh cake dâu tây </h5>
-                            <span>5$</span>
-                        </div>
-                        <div class="team-social">
-                            <a class="btn btn-square btn-light rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square btn-light rounded-circle" href=""><i class="fab fa-twitter"></i></a>
-                      
+                     <div class="team-social">
+                            <a class="btn btn-square btn-light rounded-circle" th:href="@{/home/product}"><i class="fab fa-facebook-f"></i></a>
                         </div>
                     </div>
                 </div>
@@ -534,80 +525,6 @@
      </div>
     </div>
     
-    
-    
-   <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h2 class="card-title">Thông tin đơn hàng</h2>
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>Ảnh</th>
-                                    <th>Tên sản phẩm</th>
-                                    <th>Số lượng</th>
-                                    <th>Thành tiền</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <!-- Dữ liệu đơn hàng được hiển thị ở đây -->
-                            </tbody>
-                        </table>
-                        <h4>Tổng thanh toán: <span th:text="${totalAmount} + ' USD'"></span></h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h2 class="card-title">Thông tin người mua</h2>
-                        <form th:action="@{/order}" method="post">
-                            <div class="form-group">
-                                <label for="fullName">Họ và tên:</label>
-                                <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Nhập họ và tên" required="required" />
-                            </div>
-                            <div class="form-group">
-                                <label for="phoneNumber">Số điện thoại:</label>
-                                <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Nhập số điện thoại" required="required" />
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email:</label>
-                                <input type="email" class="form-control" id="email" name="email" placeholder="Email" required="required" />
-                            </div>
-                            <div class="form-group">
-                                <label for="address">Địa chỉ giao hàng:</label>
-                                <input type="text" class="form-control" id="address" name="address" placeholder="Nhập địa chỉ" required="required" />
-                            </div>
-                            <div class="form-group">
-                                <label for="note">Ghi chú (nếu có):</label>
-                                <textarea class="form-control" id="note" name="note" rows="3" placeholder="Ghi chú thêm (nếu có..)"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label for="discountCode">Mã giảm giá:</label>
-                                <input type="text" class="form-control" id="discountCode" name="discountCode" placeholder="Nhập mã giảm giá (nếu có..)" />
-                                <small><a href="/cart/gmail">Nhận mã giảm giá</a></small>
-                            </div>
-                            <div class="form-group">
-                                <label>Phương thức thanh toán:</label>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" id="paymentCash" name="paymentMethod" value="COD" />
-                                    <label class="form-check-label" for="paymentCash">Thanh toán tiền mặt khi nhận hàng (COD)</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" id="paymentBank" name="paymentMethod" value="ChuyenKhoan" />
-                                    <label class="form-check-label" for="paymentBank">Chuyển khoản</label>
-                                </div>
-                            </div>
-                            <button type="submit" class="btn btn-warning mt-2 mb-2 text-white fw-bold">Mua hàng</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
 
 
     <!-- Footer Start -->

@@ -45,5 +45,13 @@ public class home {
 
 		return "/contact/contact";
 	}
+	
+	// trang liên hệ
+		@GetMapping("/home/cart")
+		private String cart() {
+			// TODO Auto-generated method stub
+
+			return "/cart/cart";
+		}
 }
 
