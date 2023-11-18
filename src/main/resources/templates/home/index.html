@@ -65,13 +65,20 @@
                 <a href="contact.html" class="nav-item nav-link">Đặt hàng</a>
             </div>
             <div class=" d-none d-lg-flex">
+				
                 <div class="flex-shrink-0 btn-lg-square border border-light rounded-circle">
                     <i class="fas fa-sign-in-alt text-warning"></i>
                 </div>
-                <div class="ps-3">
-                  
-                    <p class="text-light fs-5 mb-0">Login</p>
-                </div>
+                
+              <div class="ps-3 ">
+              <a th:href="@{/home/cart}" class="text-decoration-none ">
+              <div class="btn-lg-square border border-light  rounded-circle d-flex justify-content-center align-items-center">
+              <i class="fa fa-cart-plus text-warning"></i>
+              </div>
+              </a>
+              </div>
+
+                
             </div>
         </div>
     </nav>

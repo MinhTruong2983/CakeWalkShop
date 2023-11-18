@@ -76,14 +76,13 @@
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-6 wow fadeIn" data-wow-delay="0.1s">
         <div class="container text-center pt-5 pb-3">
-            <h1 class="display-4 text-white animated slideInDown mb-3">Order</h1>
+            <h1 class="display-4 text-white animated slideInDown mb-3">Giỏ Hàng</h1>
           
         </div>
     </div>
     <!-- Page Header End -->
 
-  
-  
+
      <!-- cart Start-->
    <section style="background-color: antiquewhite;">
    <div class="container">
@@ -91,29 +90,38 @@
             <div class="col-md-6">
                 <div class="card m-2">
                     <div class="card-body">
-                        <h2 class="card-title">Thông tin đơn hàng</h2>
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>Ảnh</th>
-                                    <th>Tên sản phẩm</th>
-                                    <th>Số lượng</th>
-                                    <th>Thành tiền</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <!-- Dữ liệu đơn hàng được hiển thị ở đây -->
-                            </tbody>
-                        </table>
-                        <h4>Tổng thanh toán: <span th:text="${totalAmount} + ' USD'"></span></h4>
-                    </div>
+                        <h2 class="card-title d-flex justify-content-center ">Giỏ hàng</h2>
+                 <!--cart Start--> 
+                 
+        <table class="table">
+        <tbody>
+        <tr th:each="item : ${cart}">
+            <td>
+                <img th:src="@{'/img/' + ${item.image}}"
+                     alt="Product Image" width="50">
+            </td>
+            <td th:text="${item.name}"></td>
+            <td th:text="${item.qty}"></td>
+            <td th:text="${item.price} + ' USD'"></td>
+            <td>
+                <a th:href="@{'/product/delete/' + ${item.id}}"
+                   class="btn btn-danger btn-sm">Xóa</a>
+            </td>
+        </tr>
+        </tbody>
+        </table>
+                    <div class="row">
+						<h4>Tổng thanh toán:</h4>  <h4 th:text="${totalAmount}"></h4>
+					</div>
+                        
+              </div>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="card m-2">
                     <div class="card-body">
-                        <h2 class="card-title">Thông tin người mua</h2>
-                        <form th:action="@{/order}" method="post">
+                        <h2 class="card-title d-flex justify-content-center">Thông tin của bạn</h2>
+                        <form th:action="@{/home/order}" method="post">
                             <div class="form-group">
                                 <label for="fullName">Họ và tên:</label>
                                 <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Nhập họ và tên" required="required" />
@@ -160,16 +168,6 @@
  </section>
      <!-- cart End-->
  
- 
- 
- 
- 
- 
- 
- 
- 
-  
-  
 
 
     <!-- Footer Start -->

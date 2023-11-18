@@ -14,13 +14,7 @@ public class home {
 	}
 	
 	
-	// trang sản phẩm 
-	@GetMapping("/home/product")
-	private String products() {
-		// TODO Auto-generated method stub
-
-		return "/products/product";
-	}
+	
 	
 	// trang thông tin
 	@GetMapping("/home/about")
@@ -46,12 +40,6 @@ public class home {
 		return "/contact/contact";
 	}
 	
-	// trang liên hệ
-		@GetMapping("/home/cart")
-		private String cart() {
-			// TODO Auto-generated method stub
-
-			return "/cart/cart";
-		}
+	
 }
 
