@@ -100,9 +100,12 @@
                 <img th:src="@{'/img/' + ${item.image}}"
                      alt="Product Image" width="50">
             </td>
-            <td th:text="${item.name}"></td>
-            <td th:text="${item.qty}"></td>
-            <td th:text="${item.price} + ' USD'"></td>
+            <td th:text="${item.name}">		
+			</td>
+            <td>
+			<td th:text="${item.qty}">
+            </td>  
+            <td th:text="${item.price} + ' USD'"></td>   
             <td>
                 <a th:href="@{'/product/delete/' + ${item.id}}"
                    class="btn btn-danger btn-sm">Xóa</a>
@@ -111,10 +114,11 @@
         </tbody>
         </table>
                     <div class="row">
-						<h4>Tổng thanh toán:</h4>  <h4 th:text="${totalAmount}"></h4>
+						<h4>Tổng thanh toán:</h4>  <h4 th:text="${totalAmount}"> </h4>					
 					</div>
                         
-              </div>
+                        
+                </div>
                 </div>
             </div>
             <div class="col-md-6">
@@ -249,7 +253,6 @@
     <!-- Copyright End -->
 
 
-    <!-- Back to Top -->
 
 
    <!-- JavaScript Libraries -->

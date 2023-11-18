@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.CakeWalk.Dao.CakesDao;
 import com.CakeWalk.Dao.OrdersDao;
@@ -39,11 +40,10 @@ public class cartController {
 	
 	
 	
-	
-	// lấy id của sản phẩm vừa click vào để thêm vào giỏ hàng 
+	// 
+	      // lấy id của sản phẩm vừa click vào để thêm vào giỏ hàng 
 	 @GetMapping("/home/addcart/{cakeid}")
-	    public String addToCart(@PathVariable int cakeid ) {
-		 
+	    public String addToCart(@PathVariable int cakeid,@RequestParam(value = "quantity", defaultValue = "1") int quantity ) {
 		 //tạo và tìm kiếm cake có id tương tự  đường dẫn
 		 Cakes cakes = cakesDao.getById(cakeid);
 	        System.out.println(cakes); 
@@ -52,7 +52,8 @@ public class cartController {
 	        cartItem.setId(cakes.getCakeid());
 	        cartItem.setName(cakes.getName());
 	        cartItem.setPrice(cakes.getPrice());
-	        cartItem.setQty(cakes.getQuantity());
+
+	        cartItem.setQty(quantity);
 	        cartItem.setImage(cakes.getImage());
 	        cartItem.setCakes(cakes);
 	       // Lấy giỏ hàng từ phiên làm việc của người dùng và thêm sản phẩm vào đó
@@ -62,12 +63,10 @@ public class cartController {
 	            service.set("cart", cart);
 	        }
 	        cart.addItem(cartItem);
-	       
 	        // Chuyển hướng người dùng đến trang giỏ hàng
 	        return "redirect:/home/product";
 	    }
-	
-	 
+
 	 
 	   // hien thi gio hang 
 		@GetMapping("/home/cart")
@@ -89,11 +88,10 @@ public class cartController {
 	        model.addAttribute("cart", cart.getItems());        
 		}
 	        model.addAttribute("khachhang",dto);
-	        return "/cart/cart";
-	        
-	        
+	        return "/cart/cart";    
 	    }
-	        
+		
+	
 	        
 	    
 		

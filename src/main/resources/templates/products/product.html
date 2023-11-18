@@ -162,13 +162,17 @@
                     </div>
                     
                     <div class=" d-flex justify-content-center mt-2">
-               <!-- Biểu tượng giỏ hàng 
-               }
-               -->
+               <!-- Biểu tượng giỏ hàng}  -->
                          
+                              <div class="col-3">
+                                <input type="number" name="quantity" value="1" min="1" max="10" class=" form-control quantity-input" required>
+                                   
+                             </div>
 							    <button th:href="@{'/home/addcart/' + ${cake.cakeid}}"  class="btn btn-square btn-light rounded-circle cart-button">
                                 <i class="fas fa-shopping-cart"></i>
+                                
                                 </button>
+                                
 					
                             <!-- Thông báo -->
                                <div class="cart-notification">Đã thêm vào giỏ hàng</div>       
@@ -284,39 +288,35 @@
 
  <!-- Đoạn mã JavaScript -->
 <script>
-    // Lấy tất cả các biểu tượng giỏ hàng
     var cartButtons = document.querySelectorAll('.cart-button');
 
-    // Lặp qua từng biểu tượng giỏ hàng
     cartButtons.forEach(function(button) {
-        // Lắng nghe sự kiện click trên mỗi biểu tượng giỏ hàng
         button.addEventListener('click', function(event) {
-             event.preventDefault(); // Ngăn chặn hành động mặc định của nút
+            event.preventDefault(); 
 
-
-            // Tìm phần tử thông báo trong cùng phạm vi của sự kiện click
             var notification = button.nextElementSibling;
 
-            // Thêm lớp 'show' để hiển thị thông báo
             notification.classList.add('show');
-           
-            // Ẩn thông báo sau 3 giây
+
             setTimeout(function() {
-                // Xóa lớp 'show' để ẩn thông báo
                 notification.classList.remove('show');
-                
-                  // Thay đổi đường dẫn URL sau khi hiển thị thông báo
-            var newURL = button.getAttribute('href'); // Lấy đường dẫn từ thuộc tính href của thẻ a
-            window.history.pushState({}, '', newURL); // Thay đổi URL trên thanh địa chỉ của trình duyệt
-           
-           
-           // Tải lại trang với đường dẫn đã thay đổi
-        window.location.href = newURL;
-           
+
+                var currentURL = button.getAttribute('href');
+                var quantityInput = button.parentNode.querySelector('.quantity-input');
+                var quantity = quantityInput.value; // Lấy giá trị số lượng từ input
+
+                if (currentURL.includes('?')) {
+                    currentURL += '&quantity=' + quantity; // Nếu URL đã có tham số, thêm tham số quantity vào sau dấu &
+                } else {
+                    currentURL += '?quantity=' + quantity; // Nếu URL chưa có tham số, thêm tham số quantity vào sau dấu ?
+                }
+
+                window.location.href = currentURL;
             }, 3000);
         });
     });
 </script>
+
 
 
 
